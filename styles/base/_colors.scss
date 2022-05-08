@@ -1,0 +1,14 @@
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+  --color-blue: #bacdd8;
+  --color-blue-light: #f1f4f8;
+  --color-blue-dark: #5791b2;
+  --color-blue-dark-darker: hsl(202, 37%, 40%) ;
+  --color-gray-light: #dedede;
+  --color-gray-medium: #858585;
+  --color-text-light: var(--color-gray-medium);
+  --color-text-dark: var(--color-black);
+  --color-primary-link: var(--color-blue-dark);
+  --color-primary-link-hover: #81adc5;
+}

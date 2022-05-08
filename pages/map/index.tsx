@@ -49,6 +49,8 @@ const Map: NextPage = () => {
       type: 'FeatureCollection',
       features: markers.map((marker) => ({
         properties: {
+          city: marker.city,
+          country: marker.country,
           iconSize: [30, 42],
         },
         geometry: {
@@ -73,6 +75,11 @@ const Map: NextPage = () => {
         // add marker to map
         new mapboxgl.Marker(markerIcon)
           .setLngLat(marker.geometry.coordinates)
+          .setPopup(
+            new mapboxgl.Popup({ offset: 25 }).setHTML(
+              '<h3>' + marker.properties.city + ', ' + marker.properties.country + '</h3>'
+            )
+          )
           .addTo(map.current);
       });
     });
