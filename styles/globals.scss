@@ -1,0 +1,19 @@
+@import 'base/colors';
+@import 'base/fonts';
+@import 'external-libraries/mapbox-gl';
+
+html,
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}

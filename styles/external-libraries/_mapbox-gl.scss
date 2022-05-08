@@ -1,0 +1,26 @@
+@import '../base/colors';
+
+// Mapbox GL JS custom styles
+.events-marker {
+  background-repeat: no-repeat;
+}
+
+.mapboxgl-popup-content {
+  box-shadow: 0 1px 40px rgb(0 0 0 / 10%) !important;
+  padding: 25px 20px !important;
+
+  h3 {
+    font-family: 'Helvetica 65 Medium', sans-serif;
+  }
+}  
+
+.mapboxgl-popup-close-button {
+  color: var(--color-blue-dark);
+  font-size: 30px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: none !important;
+    color: var(--color-blue-dark-darker) !important;
+  }
+}
