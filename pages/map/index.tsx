@@ -1,11 +1,13 @@
 import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 
 import { mapboxClient } from '../../services/mapbox';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
-import { markers } from './Markers';
+import { markers } from '../api/Markers';
 import styles from './map.module.scss';
 
 const Map: NextPage = () => {
@@ -94,9 +96,16 @@ const Map: NextPage = () => {
 
   return (
     <div className={styles.map} id="map">
-      <h1 className={styles['map__title']}>World Exploration</h1>
-      <p className={styles['map__subtitle']}>Traveling is an ultimate joy in my life</p>
-      <div className={styles['map__container']} ref={mapContainer} />
+      <Head>
+        <title>Map of World Adventurer</title>
+        <meta name="description" content="World map with location markers of all the countries I have traveled to." />
+      </Head>
+
+      <main>
+        <h1 className={styles['map__title']}>World Adventurer</h1>
+        <p className={styles['map__subtitle']}>Traveling is an ultimate joy in my life. <Link href="/destinations/photo-gallery"><a>Check out</a></Link> my photos from my adventures.</p>
+        <div className={styles['map__container']} ref={mapContainer} />
+      </main>
     </div>
   );
 };
