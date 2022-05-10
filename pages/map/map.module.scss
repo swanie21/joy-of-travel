@@ -1,3 +1,19 @@
 .map {
-  height: 80vh;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    padding: 3rem 3rem 1rem;
+    text-align: center;
+  }
+
+  &__subtitle {
+    padding-bottom: 2rem;
+  }
+
+  &__container {
+    height: 80vh;
+    width: 95%;
+  }
 }
