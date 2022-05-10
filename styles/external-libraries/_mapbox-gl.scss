@@ -1,16 +1,22 @@
 @import '../base/colors';
+@import '../base/fonts';
 
 // Mapbox GL JS custom styles
 .events-marker {
   background-repeat: no-repeat;
 }
 
+.mapboxgl-popup.mapboxgl-popup-anchor-bottom {
+  max-width: 250px !important;
+}
+
 .mapboxgl-popup-content {
   box-shadow: 0 1px 40px rgb(0 0 0 / 10%) !important;
   padding: 25px 20px !important;
 
-  h3 {
-    font-family: 'Helvetica 65 Medium', sans-serif;
+  p {
+    font-family: $font-primary;
+    margin: 15px 0;
   }
 }  
 

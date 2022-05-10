@@ -41,7 +41,7 @@ const Map: NextPage = () => {
         container: mapContainer.current,
         style: 'mapbox://styles/mapbox/light-v10',
         center: [15.4542, 18.7322], // center map on Chad
-        zoom: 2.1
+        zoom: 1.8
       });
     }
 
@@ -77,7 +77,7 @@ const Map: NextPage = () => {
           .setLngLat(marker.geometry.coordinates)
           .setPopup(
             new mapboxgl.Popup({ offset: 25 }).setHTML(
-              '<h3>' + marker.properties.city + ', ' + marker.properties.country + '</h3>'
+              `<p>${marker.properties.city}, ${marker.properties.country}</p>`
             )
           )
           .addTo(map.current);
@@ -93,11 +93,11 @@ const Map: NextPage = () => {
   }, []);
 
   return (
-    <>
-      <div id="map">
-        <div className={styles['map']} ref={mapContainer} />
-      </div>
-    </>  
+    <div className={styles.map} id="map">
+      <h1 className={styles['map__title']}>World Exploration</h1>
+      <p className={styles['map__subtitle']}>Traveling is an ultimate joy in my life</p>
+      <div className={styles['map__container']} ref={mapContainer} />
+    </div>
   );
 };
 

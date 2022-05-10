@@ -1,0 +1,33 @@
+// Helvetica Neue font with CDN link
+// Source: https://www.cdnfonts.com/helvetica-neue-9.font
+
+// Sabon font with CDN link
+// Source: https://www.cdnfonts.com/sabon.font
+
+@font-face {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-display: swap;
+  src: url('http://fonts.cdnfonts.com/css/helvetica-neue-9');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica 65 Medium', sans-serif;
+  font-display: swap;
+  src: url('http://fonts.cdnfonts.com/css/helvetica-neue-9?styles=49045');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sabon', serif;
+  font-display: swap;
+  src: url('http://fonts.cdnfonts.com/css/sabon');
+  font-weight: 400;
+  font-style: normal;
+}
+
+$font-primary: 'Helvetica Neue', sans-serif;
+$font-primary-medium: 'Helvetica 65 Medium', sans-serif;
+$font-secondary: 'Sabon', serif;
