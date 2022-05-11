@@ -35,12 +35,12 @@ const Destinations: NextPage = () => {
 
       <main>
         <h1 className={styles['destinations__title']}>Photos from Around the World</h1>
-        <p className={styles['destinations__subtitle']}>From bustling cities to remote beaches, I like to explore it all!</p>
+        <p className={styles['destinations__subtitle']}>From bustling cities to remote beaches, I love to explore it all!</p>
         <div className={styles['destinations__photos-container']}>
           <Masonry breakpointCols={breakpointColumnsObj} className={styles['destinations__masonry-grid']} columnClassName={styles['destinations__masonry-grid-column']}>
             {photos.length > 0 && (
               photos.map((item: Destination, index) => (
-                <div key={index}>
+                <div className={styles['destinations__photo']} key={index}>
                   {item.photoOrientation === 'vertical' ? (
                     <Image
                       src={item.photo}
@@ -56,6 +56,9 @@ const Destinations: NextPage = () => {
                       height={375}
                     />
                   )}
+                  <div className={styles['destinations__photo--description']}>
+                    <p>{item.city}, {item.country}</p>
+                  </div>
                 </div>
               ))
             )}
