@@ -73,10 +73,10 @@ const Destinations: NextPage = () => {
                 <Link href="/">
                   <a>
                     <Image
-                      src="/left-arrow-blue.png"
+                      src="/left-arrow-blue.svg"
                       alt="left arrow blue icon"
-                      width={19}
-                      height={13}
+                      width={18}
+                      height={12}
                     />
                     Go back
                   </a>
