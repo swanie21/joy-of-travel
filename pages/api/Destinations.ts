@@ -18,7 +18,7 @@ export const destinations: Destination[] = [
     city: 'Angkor Wat',
     country: 'Cambodia',
     photo: '/angkor-wat-cambodia.jpeg',
-    photoAlt: 'Angkor Wat temple'
+    photoAlt: 'Angkor Wat temple in Cambodia'
   },
 
   {
@@ -31,32 +31,32 @@ export const destinations: Destination[] = [
     city: 'Cancun',
     country: 'Mexico',
     photo: '/cancun-mexico.jpeg',
-    photoAlt: 'Cancun beach',
+    photoAlt: 'Cancun beach stretch',
   },
   {
     city: 'Bangkok',
     country: 'Thailand',
     photo: '/grand-palace-bangkok-thailand.jpeg',
-    photoAlt: 'Grand Palace',
+    photoAlt: 'Grand Palace in Bangkok, Thailand',
     photoOrientation: 'vertical'
   },
   {
     city: 'Jeju Island',
     country: 'South Korea',
     photo: '/jeju-island-south-korea.jpeg',
-    photoAlt: 'Jeju Island',
+    photoAlt: 'Jeju Island, the Hawaii of South Korea',
   },
   {
     city: 'Khao Sam',
     country: 'Thailand',
     photo: '/lake-rajjaprapa-thailand.jpeg',
-    photoAlt: 'Lake Rajjaprapa',
+    photoAlt: 'Lake Rajjaprapa in Khao Sam, Thailand',
   },
   {
     city: 'Lantau Island',
     country: 'Hong Kong',
     photo: '/lantau-island-hong-kong.jpeg',
-    photoAlt: 'Lantau Island with Big Buddha',
+    photoAlt: 'Lantau Island with Big Buddha in Hong Kong',
   },
   {
     city: 'Kuala Lumpur',
@@ -75,31 +75,31 @@ export const destinations: Destination[] = [
     city: 'Ho Chi Min City',
     country: 'Vietnam',
     photo: '/mekong-river-vietnam.jpeg',
-    photoAlt: 'Mekong River',
+    photoAlt: 'Mekong River in Vietnam',
   },
   {
     city: 'Bali',
     country: 'Indonesia',
     photo: '/mt-batur-bali-indonesia.jpeg',
-    photoAlt: 'Mt. Batur',
+    photoAlt: 'Mt. Batur in Bali, Indonesia',
   },
   {
     city: 'Fujinomiya',
     country: 'Japan',
     photo: '/mt-fuji-fujinomiya-japan.jpeg',
-    photoAlt: 'Mt. Fuji',
+    photoAlt: 'Mt. Fuji in Japan',
   },
   {
     city: 'Nassau',
     country: 'Bahamas',
     photo: '/nassau-bahamas.jpg',
-    photoAlt: 'Ocean view',
+    photoAlt: 'Ocean view in Nassau, Bahamas',
   },
   {
     city: 'Palawan',
     country: 'Philippines',
     photo: '/palawan-philippines.jpeg',
-    photoAlt: 'Palawan Island near the underground river',
+    photoAlt: 'Palawan Island near the underground river in the Philippines',
     photoOrientation: 'vertical'
   },
   {
@@ -138,7 +138,7 @@ export const destinations: Destination[] = [
     city: 'Sihanouk Ville',
     country: 'Cambodia',
     photo: '/sihanouk-ville-cambodia.jpeg',
-    photoAlt: 'Sihanouk Ville Beach',
+    photoAlt: 'Sihanouk Ville Beach in Cambodia',
   },
   {
     city: 'Suncheon Bay',
@@ -174,7 +174,7 @@ export const destinations: Destination[] = [
     city: 'Tsim Sha Tsui',
     country: 'Hong Kong',
     photo: '/tsim-sha-tsui-hong-kong.jpeg',
-    photoAlt: 'Tsim Sha Tsui laser show at night',
+    photoAlt: 'Tsim Sha Tsui laser show at night in Hong Kong',
   },
   {
     city: 'Ubud',
