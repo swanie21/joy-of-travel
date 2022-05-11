@@ -29,7 +29,7 @@
       padding: 0 60px;
     }  
 
-    @include respond_to(tablet-and-larger) {
+    @include respond_to(desktop) {
       padding: 0;
     }
   }
