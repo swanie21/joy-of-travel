@@ -15,7 +15,7 @@ const Map: NextPage = () => {
   // used any for now because setting <string | HTMLElement>(null) throws error
   // solution found here with setting state: https://stackoverflow.com/questions/66271302/reactjs-mapbox-gl-invalid-type-container-must-be-a-string-or-htmlelement
   const mapContainer = useRef<any>(null);
-  const map = useRef<mapboxgl.Map | null>(null);
+  const map = useRef<mapboxgl.Map | any>(null);
 
   useEffect(() => {
     const mobileMediaQuery = window.matchMedia('(max-width: 450px)');
@@ -103,8 +103,10 @@ const Map: NextPage = () => {
       </Head>
 
       <main>
-        <h1 className={styles['map__title']}>World Adventurer</h1>
-        <p className={styles['map__subtitle']}>Traveling is my ultimate joy in life. <Link href="/destinations/photo-gallery"><a>Check out</a></Link> photos from my adventures.</p>
+        <div className={styles['map__title']}>
+          <h1>World Adventurer</h1>
+          <p>Traveling is my ultimate joy in life. <Link href="/destinations/photo-gallery"><a>Check out</a></Link> photos from my adventures.</p>
+        </div>
         <div className={styles['map__container']} ref={mapContainer} />
         <div className={styles['map__home-back-link']}>
           <div className="link-arrow">

@@ -1,21 +1,26 @@
+@import '../../styles/utils/media-queries'; 
+
 .map {
   align-items: center;
   display: flex;
   flex-direction: column;
 
   &__title {
-    padding: 3rem 3rem 1rem;
+    padding: 2rem;
     text-align: center;
-  }
 
-  &__subtitle {
-    color: var(--color-gray-dark);
-    padding: 0 3rem 2rem;
-    text-align: center;
+    @include respond_to(tablet-and-larger) {
+      padding: 3rem 3rem 2rem;
+    }
+
+    > p {
+      color: var(--color-gray-dark);
+      padding-top: 1rem;
+    }
   }
 
   &__container {
-    height: 80vh;
+    height: 75vh;
     margin: auto;
     width: 95%;
   }
