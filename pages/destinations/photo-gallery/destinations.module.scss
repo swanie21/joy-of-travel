@@ -1,6 +1,35 @@
 .destinations {
-  &__my-masonry-grid {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  
+  &__title {
+    padding: 3rem 3rem 1rem;
+    text-align: center;
+  }
+
+  &__subtitle {
+    padding: 0 3rem 2rem;
+    text-align: center;
+  }
+
+  &__photos-container {
+    margin: 0 auto;
+    max-width: 1000px;
+    margin-bottom: 100px;
+  }
+
+  &__masonry-grid {
     display: flex;
     width: 100%;
+
+    &-column {
+      padding-left: 10px;
+    }
+  }
+
+  &__actions-button {
+    margin-top: 50px;
+    text-align: center;
   }
 }

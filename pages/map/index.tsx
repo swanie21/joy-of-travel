@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 
@@ -103,8 +104,24 @@ const Map: NextPage = () => {
 
       <main>
         <h1 className={styles['map__title']}>World Adventurer</h1>
-        <p className={styles['map__subtitle']}>Traveling is an ultimate joy in my life. <Link href="/destinations/photo-gallery"><a>Check out</a></Link> my photos from my adventures.</p>
+        <p className={styles['map__subtitle']}>Traveling is my ultimate joy in life. <Link href="/destinations/photo-gallery"><a>Check out</a></Link> photos from my adventures.</p>
         <div className={styles['map__container']} ref={mapContainer} />
+        <div className={styles['map__home-back-link']}>
+          <div className="link-arrow">
+            <Link href="/">
+              <a>
+                <Image
+                  src="/left-arrow-blue.png"
+                  alt="left arrow blue icon"
+                  width={19}
+                  height={13}
+                />
+                Go back
+              </a>
+            </Link>
+            <span>to home page</span>
+          </div>
+        </div>
       </main>
     </div>
   );

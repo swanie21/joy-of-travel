@@ -1,0 +1,50 @@
+.home {
+
+  &__container {
+    background-image: url('../../public/clouds.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    height: 100vh;  
+    justify-content: center;
+
+    &:before {
+      background-color: var(--color-black);
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      opacity: 0.55;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  &__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+
+    &--title {
+      color: var(--color-white);
+      padding-bottom: 2rem;
+    }
+
+    &--subtitle {
+      color: var(--color-white);
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+    width: 265px;
+  }
+}

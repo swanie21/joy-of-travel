@@ -18,3 +18,30 @@ body {
 a {
   text-decoration: none;
 }
+
+main {
+  width: 100%;
+}
+
+// Link with arrow icon animation
+.link-arrow {
+  display: inline-block;
+  font-family: $font-secondary;
+
+  > a {
+    padding-right: 5px;
+
+    &:hover {
+      // The arrow icon is using the Image component
+      // The <span> is the wrapper container for the <img> element
+      > span {
+        transform: translateX(-12px);
+      }
+    }
+
+    > span {
+      margin-right: 10px !important; // override Image component styling
+      transition: transform 0.3s cubic-bezier(0.32, -0.05, 0.38, 0.88);
+    }
+  }
+}

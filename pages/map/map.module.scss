@@ -9,11 +9,19 @@
   }
 
   &__subtitle {
-    padding-bottom: 2rem;
+    color: var(--color-gray-dark);
+    padding: 0 3rem 2rem;
+    text-align: center;
   }
 
   &__container {
     height: 80vh;
+    margin: auto;
     width: 95%;
+  }
+
+  &__home-back-link {
+    padding-top: 2rem;
+    text-align: center;
   }
 }

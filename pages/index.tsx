@@ -1,5 +1,8 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import { LinkButton } from '../components/LinkButton';
+
+import styles from '../styles/pages/Home.module.scss';
 
 const Home: NextPage = () => {
   return (
@@ -10,8 +13,17 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <h1>Welcome</h1>
+      <main className={styles.home}>
+        <div className={styles['home__container']}>
+          <div className={styles['home__content']}>
+            <h1 className={styles['home__content--title']}>Travel the World</h1>
+            <p className={styles['home__content--subtitle']}>And discover new adventures</p>
+            <div className={styles['home__buttons']}>
+              <LinkButton href="/map" link="Map" />
+              <LinkButton href="/destinations/photo-gallery" link="Photos" />
+            </div>
+          </div>
+        </div>
       </main>
     </div>
   );
