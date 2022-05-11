@@ -84,12 +84,6 @@ export const destinations: Destination[] = [
     photoAlt: 'Mt. Batur in Bali, Indonesia',
   },
   {
-    city: 'Fujinomiya',
-    country: 'Japan',
-    photo: '/mt-fuji-fujinomiya-japan.jpeg',
-    photoAlt: 'Mt. Fuji in Japan',
-  },
-  {
     city: 'Nassau',
     country: 'Bahamas',
     photo: '/nassau-bahamas.jpg',
@@ -151,6 +145,12 @@ export const destinations: Destination[] = [
     country: 'Australia',
     photo: '/sydney-australia.jpeg',
     photoAlt: 'Sydney Opera House in Australia',
+  },
+  {
+    city: 'Fujinomiya',
+    country: 'Japan',
+    photo: '/mt-fuji-fujinomiya-japan.jpeg',
+    photoAlt: 'Mt. Fuji in Japan',
   },
   {
     city: 'Cape Town',

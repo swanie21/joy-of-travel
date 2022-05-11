@@ -49,7 +49,7 @@ const Map: NextPage = () => {
     }
 
     const geojson = {
-      type: 'FeatureCollection',
+      type: 'Feature',
       features: markers.map((marker) => ({
         properties: {
           city: marker.city,
@@ -59,8 +59,8 @@ const Map: NextPage = () => {
         geometry: {
           type: 'Point',
           coordinates: {
-            lng: marker.longCoord,
-            lat: marker.latCoord
+            lat: marker.latCoord,
+            lng: marker.longCoord
           }
         }
       }))
@@ -70,15 +70,14 @@ const Map: NextPage = () => {
       geojson.features.forEach((marker) => {
         // create a DOM element for the marker
         const markerIcon = document.createElement('div');
-        markerIcon.className = 'events-marker';
+        markerIcon.className = 'location-marker';
         markerIcon.style.backgroundImage = 'url(/location-marker.png)';
         markerIcon.style.width = marker.properties.iconSize[0] + 'px';
         markerIcon.style.height = marker.properties.iconSize[1] + 'px';
 
-        // add marker to map
         new mapboxgl.Marker(markerIcon)
-          .setLngLat(marker.geometry.coordinates)
-          .setPopup(
+          .setLngLat(marker.geometry.coordinates) // add marker to map
+          .setPopup( // add popup to map
             new mapboxgl.Popup({ offset: 25 }).setHTML(
               `<p>${marker.properties.city}, ${marker.properties.country}</p>`
             )

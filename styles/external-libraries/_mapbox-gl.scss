@@ -1,7 +1,7 @@
 @import '../base/fonts';
 
 // Mapbox GL JS custom styles
-.events-marker {
+.location-marker {
   background-repeat: no-repeat;
 }
 
@@ -22,7 +22,11 @@
 .mapboxgl-popup-close-button {
   color: var(--color-blue-dark);
   font-size: 30px;
+  max-height: 32px;
+  max-width: 30px;
+  outline: none;
   transition: background-color 0.3s ease, color 0.3s ease;
+
 
   &:hover {
     background-color: none !important;
