@@ -29,7 +29,7 @@ const Map: NextPage = () => {
       map.current = new mapboxgl.Map({
         container: mapContainer.current,
         style: 'mapbox://styles/mapbox/light-v10',
-        center: [20.5937, 78.9629], // use India coordinates to center on Europe
+        center: [90.0000, -1.0000], // center on southeast Asia
         zoom: 1
       });
     } else if (tabletMediaQuery.matches) {

@@ -45,6 +45,12 @@
     display: flex;
     justify-content: space-between;
     margin-top: 4rem;
-    width: 265px;
+    width: 240px;
+
+    > a {
+      display: flex;
+      justify-content: center;
+      max-width: 110px;
+    }
   }
 }
