@@ -23,7 +23,7 @@ const Destinations: NextPage = () => {
   const breakpointColumnsObj = {
     default: 3,
     900: 2,
-    500: 1
+    580: 1
   };
 
   return (
@@ -34,8 +34,10 @@ const Destinations: NextPage = () => {
       </Head>
 
       <main>
-        <h1 className={styles['destinations__title']}>Photos from Around the World</h1>
-        <p className={styles['destinations__subtitle']}>From bustling cities to remote beaches, I love to explore it all!</p>
+        <div className={styles['destinations__title']}>
+          <h1>Photos from Around the World</h1>
+          <p>From bustling cities to remote beaches, I love to explore it all!</p>
+        </div>
         <div className={styles['destinations__photos-container']}>
           <Masonry breakpointCols={breakpointColumnsObj} className={styles['destinations__masonry-grid']} columnClassName={styles['destinations__masonry-grid-column']}>
             {photos.length > 0 && (

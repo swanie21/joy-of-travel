@@ -29,7 +29,7 @@ const Map: NextPage = () => {
       map.current = new mapboxgl.Map({
         container: mapContainer.current,
         style: 'mapbox://styles/mapbox/light-v10',
-        center: [90.0000, 90.0000], // center map on Bangladesh
+        center: [20.5937, 78.9629], // use India coordinates to center on Europe
         zoom: 1
       });
     } else if (tabletMediaQuery.matches) {
@@ -103,8 +103,10 @@ const Map: NextPage = () => {
       </Head>
 
       <main>
-        <h1 className={styles['map__title']}>World Adventurer</h1>
-        <p className={styles['map__subtitle']}>Traveling is my ultimate joy in life. <Link href="/destinations/photo-gallery"><a>Check out</a></Link> photos from my adventures.</p>
+        <div className={styles['map__title']}>
+          <h1>World Adventurer</h1>
+          <p>Traveling is my ultimate joy in life. <Link href="/destinations/photo-gallery"><a>Check out</a></Link> photos from my adventures.</p>
+        </div>
         <div className={styles['map__container']} ref={mapContainer} />
         <div className={styles['map__home-back-link']}>
           <div className="link-arrow">
