@@ -4,7 +4,8 @@
   --color-blue: #bacdd8;
   --color-blue-light: #f1f4f8;
   --color-blue-dark: #5791b2;
-  --color-blue-dark-darker: hsl(202, 37%, 40%) ;
+  --color-blue-dark-darker: hsl(202, 37%, 40%);
+  --color-gray: #c4c4c4;
   --color-gray-light: #dedede;
   --color-gray-extra-light: #fafafa;
   --color-gray-medium: #858585;
@@ -13,4 +14,10 @@
   --color-text-dark: var(--color-black);
   --color-primary-link: var(--color-blue-dark);
   --color-primary-link-hover: #81adc5;
+
+  // Color palette https://colorhunt.co/palette/7579e79ab3f5a3d8f4b9fffc
+  --violet-accent: #7579E7;
+  --lavender-accent: #9AB3F5;
+  --aqua-accent: #8BCDCD;
+  --pink-accent: #DF70FF;
 }

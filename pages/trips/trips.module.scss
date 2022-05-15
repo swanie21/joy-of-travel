@@ -1,0 +1,88 @@
+@import '../../styles/utils/css-grids';
+@import '../../styles/utils/media-queries';
+
+.trips {
+  padding: 2rem;
+
+  @include respond_to(tablet-and-larger) {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 3rem;
+  }
+
+  &__filters {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+
+    @include respond_to(mobile-medium-and-larger) {
+      align-items: flex-end;
+    }  
+
+    @include respond_to(tablet-and-larger) {
+      align-items: center;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+    
+    &--bar {
+      border-bottom: 1px solid var(--color-gray);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-bottom: 15px;
+
+      @include respond_to(mobile-medium-and-larger) {
+        align-items: flex-end;
+        flex-direction: row;
+      }  
+
+      > h1 {
+        margin-bottom: 15px;
+
+        @include respond_to(mobile-medium-and-larger) {
+          margin-bottom: 0;
+        }  
+
+        > span {
+          font-size: 16px;
+          line-height: 27px;
+        }
+      }
+    }
+
+    &--select {
+
+      &-unit-styles {
+        align-items: center;
+        display: flex;
+        margin-bottom: 15px;
+
+        @include respond_to(tablet-and-larger) {
+          margin: 0 1.6rem 0 0;
+        }
+        
+        > select {
+          min-width: 150px;
+        }
+
+        > label {
+          margin-right: 8px;
+        }
+      }
+    }
+
+    &--button {
+      min-width: 230px
+    }
+  }
+  
+  &__list {
+    margin-top: 50px;
+    width: 100%;
+
+    @supports (display: grid) {
+      @include thirds-grid(auto-fill, stretch, 30px, 30px, 300px); // minimum card width is 300px
+    }
+  }
+}
