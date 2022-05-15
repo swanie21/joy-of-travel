@@ -60,7 +60,7 @@ const Trips: NextPage = () => {
           <h1>Trips <span>({tripData.length} total)</span></h1>
           <div className={styles['trips__filters']}>
             <div className={styles['trips__filters--select-unit-styles']}>
-              <label htmlFor="unit-style-select">Sort by unit style:</label>
+              <label htmlFor="unit-style-select">Sort by Unit Style:</label>
               <select id="unit-style-select" name="unit style" onChange={(event) => setUnitStyle(event.target.value)} value={unitStyle}> 
                 <option value="all">All</option>
                 <option value="beach">Beach</option>
@@ -70,7 +70,7 @@ const Trips: NextPage = () => {
               </select>
             </div>
             <Button
-              label={`${checkInDateOrder ? 'Sort by closest trip date' : 'Sort by farthest trip date'}`}
+              label={`${checkInDateOrder ? 'Sort by Closest Trip Date' : 'Sort by Farthest Trip Date'}`}
               onClick={(): void => toggleDateOrder()}
               size="small"
               styleClass={styles['trips__filters--button']}

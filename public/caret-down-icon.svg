@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="19px" viewBox="0 0 30 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Path</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="open-caret-downwards" transform="translate(0.000000, -0.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="open-caret-(3)" transform="translate(15.000000, 9.375000) rotate(90.000000) translate(-15.000000, -9.375000) translate(5.625000, -5.625000)">
+                <g id="dropdown-carrot" transform="translate(9.375000, 15.000000) rotate(-90.000000) translate(-9.375000, -15.000000) translate(-5.625000, 5.625000)">
+                    <path d="M29.9994,2.08333594 C29.9994,2.70833344 29.8119037,3.12499969 29.4369113,3.54166594 L16.3121737,18.1249997 C15.5621888,18.9583322 14.4372113,18.9583322 13.6872263,18.1249997 L0.56248875,3.54166594 C-0.18749625,2.70833344 -0.18749625,1.45833469 0.56248875,0.625002188 C1.31247375,-0.208334062 2.43745125,-0.208334062 3.18743625,0.625002188 L15,13.7503359 L26.8125637,0.625002188 C27.5625487,-0.208334062 28.6875262,-0.208334062 29.4375113,0.625002188 C29.8125038,1.04166844 30,1.45833469 30,2.08333594 L29.9994,2.08333594 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
