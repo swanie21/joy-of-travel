@@ -9,6 +9,7 @@ import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 import { markers } from '../api/Markers';
+
 import styles from './map.module.scss';
 
 const Map: NextPage = () => {

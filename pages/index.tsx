@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+
 import { LinkButton } from '../components/LinkButton';
 
 import styles from '../styles/pages/home.module.scss';

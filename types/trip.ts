@@ -4,4 +4,3 @@ export interface Trip {
   unitName: string;
   unitStyleName: string;
 }
-

@@ -5,12 +5,12 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import Masonry from 'react-masonry-css';
 
+import { destinations } from '../../api/Destinations';
+import { Destination } from '../../../types/destination';
+
 import { Button } from '../../../components/Button';
 
 import styles from './destinations.module.scss';
-
-import { destinations } from '../../api/Destinations';
-import { Destination } from '../../../types/destination';
 
 const Destinations: NextPage = () => {
   const [photos, setPhotos] = useState(destinations || []);
