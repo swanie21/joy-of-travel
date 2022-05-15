@@ -16,4 +16,15 @@ select {
   height: 50px;
   position: relative;
   text-indent: 15px;
+
+  &:focus,
+  &:active {
+    &:not([data-focus-visible-added]) {
+      outline: none;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
 }
