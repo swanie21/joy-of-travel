@@ -1,0 +1,9 @@
+@mixin thirds-grid($repeat, $align-items, $column-gap, $row-gap, $column-width: 340px) {
+  @supports (display: grid) {
+    align-items: $align-items;
+    display: grid;
+    grid-column-gap: $column-gap;
+    grid-row-gap: $row-gap;
+    grid-template-columns: repeat($repeat, minmax($column-width, 1fr));
+  }
+}

@@ -1,0 +1,17 @@
+@import '../../styles/utils/css-grids';
+@import '../../styles/utils/media-queries';
+
+.trips {
+
+  &__list {
+    width: 100%;
+    
+    @supports (display: grid) {
+      @include thirds-grid(auto-fill, stretch, 100px, 30px, 270px);
+
+      @include respond_to(desktop) {
+        @include thirds-grid(auto-fill, stretch, 65px, 60px, 300px);
+      }
+    }
+  }
+}

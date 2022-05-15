@@ -1,14 +1,12 @@
 import { GetStaticProps } from 'next';
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import tripSetData from '../api/trips.json';
+import TripSetData from '../api/trips.json';
 import { TripCard } from '../../components/TripCard';
 
 import styles from './trips.module.scss';
 
 const Trips: NextPage = () => {
-  const tripData = tripSetData.tripSet;
-
   return (
     <div>
       <Head>
@@ -18,17 +16,18 @@ const Trips: NextPage = () => {
       </Head>
 
       <main className={styles.trips}>
-        <ul>
-          {/* documentation about Object.keys key type: https://fettblog.eu/typescript-iterating-over-objects/   */}
-          {Object.keys(tripData).map((key: any) => (
-            <TripCard
-              key={`${tripData[key].unitID} - ${tripData[key].rid}`}
-              checkInDate={tripData[key].checkInDate}
-              heroImage={tripData[key].heroImage}
-              unitName={tripData[key].unitName}
-              unitStyleName={tripData[key].unitStyleName}
-            />
-          ))}
+        <ul className={styles['trips__list']}>
+          {TripSetData.tripSet.map((trip) => {
+            return (
+              <TripCard
+                key={trip.curatedTripMasterInventoryId}
+                checkInDate={trip.checkInDate}
+                heroImage={trip.heroImage}
+                unitName={trip.unitName}
+                unitStyleName={trip.unitStyleName}
+              />
+            );
+          })}
         </ul>
       </main>
     </div>
@@ -38,7 +37,7 @@ const Trips: NextPage = () => {
 export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
-      tripSetData
+      TripSetData
     }
   };
 };
