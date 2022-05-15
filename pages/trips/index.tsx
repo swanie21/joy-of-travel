@@ -56,7 +56,7 @@ const Trips: NextPage = () => {
       </Head>
 
       <main className={styles.trips}>
-        <Button label="Sort by farthest trip date" onClick={(): void => toggleDateOrder()} />
+        <Button label={`${checkInDateOrder ? 'Sort by closest trip date' : 'Sort by farthest trip date'}`} onClick={(): void => toggleDateOrder()} />
         <label htmlFor="unit-style-select">Sort by unit style:</label>
         <select id="unit-style-select" name="unit style" onChange={(event) => setUnitStyle(event.target.value)} value={unitStyle}> 
           <option value="all">All</option>
@@ -72,6 +72,7 @@ const Trips: NextPage = () => {
                 key={index}
                 checkInDate={trip.checkInDate}
                 heroImage={trip.heroImage}
+                locationName={trip.locationName}
                 unitName={trip.unitName}
                 unitStyleName={trip.unitStyleName}
               />

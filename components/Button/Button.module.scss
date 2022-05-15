@@ -4,11 +4,6 @@
 // :root CSS variables do not work in CSS Modules
 // Syntax error: Selector ":root" is not pure (pure selectors must contain at least one local class or id)
 
-// Color palette https://colorhunt.co/palette/7579e79ab3f5a3d8f4b9fffc
-$violet: #7579E7;
-$lavender: #9AB3F5;
-$aqua: #8BCDCD;
-
 .button {
   border: none;
   border-radius: 8px;
@@ -36,10 +31,10 @@ $aqua: #8BCDCD;
   }
 
   &.primary {
-    background-color: $violet;
-    background-image: linear-gradient(134deg, $violet 0%, $aqua 100%);
+    background-color: var(--violet-accent);
+    background-image: linear-gradient(134deg, var(--violet-accent) 0%, var(--aqua-accent) 100%);
     background-size: 200% auto;
-    box-shadow: 0 16px 34px -17px $lavender;
+    box-shadow: 0 16px 34px -17px var(--lavender-accent);
     color: var(--color-white);
 
     &:hover {
@@ -50,12 +45,12 @@ $aqua: #8BCDCD;
 
   &.secondary {
     background-color: var(--color-white);
-    border: 1px solid $violet;
-    color: $violet;
+    border: 1px solid var(--violet-accent);
+    color: var(--violet-accent);
 
     &:hover {
       background-color: var(--color-gray-extra-light);
-      color: $violet;
+      color: var(--violet-accent);
     }
   }
 

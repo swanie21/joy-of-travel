@@ -2,16 +2,17 @@
 @import '../../styles/utils/media-queries';
 
 .trips {
+  padding: 2rem;
 
+  @include respond_to(tablet-and-larger) {
+    padding: 3rem 6rem;
+  }
+  
   &__list {
     width: 100%;
-    
-    @supports (display: grid) {
-      @include thirds-grid(auto-fill, stretch, 100px, 30px, 270px);
 
-      @include respond_to(desktop) {
-        @include thirds-grid(auto-fill, stretch, 65px, 60px, 300px);
-      }
+    @supports (display: grid) {
+      @include thirds-grid(auto-fill, stretch, 30px, 30px, 300px); // minimum card width is 300px
     }
   }
 }
