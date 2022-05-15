@@ -77,7 +77,7 @@ const Map: NextPage = () => {
 
         new mapboxgl.Marker(markerIcon)
           .setLngLat(marker.geometry.coordinates) // add marker to map
-          .setPopup( // add popup to map
+          .setPopup( // add pop out to map
             new mapboxgl.Popup({ offset: 25 }).setHTML(
               `<p>${marker.properties.city}, ${marker.properties.country}</p>`
             )
