@@ -47,19 +47,19 @@
     padding: 6px 12px;
 
     &.beach {
-      background-color: var(--aqua-accent);
+      background-color: var(--aqua-accent-darker);
     }
 
     &.lifestyle {
-      background-color: var(--pink-accent);
+      background-color: var(--pink-accent-darker);
     }
 
     &.metropolitan {
-      background-color: var(--lavender-accent);
+      background-color: var(--lavender-accent-darker);
     }
 
     &.mountain {
-      background-color: var(--violet-accent);
+      background-color: var(--violet-accent-darker);
     }
   }
 }
