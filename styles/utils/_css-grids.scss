@@ -1,3 +1,6 @@
+// helpful CSS Grid article explaining auto-fill vs auto-fit 
+// https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/
+
 @mixin thirds-grid($repeat, $align-items, $column-gap, $row-gap, $column-width: 340px) {
   @supports (display: grid) {
     align-items: $align-items;
