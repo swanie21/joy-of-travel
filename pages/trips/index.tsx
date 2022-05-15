@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next';
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import TripSetData from '../api/trips.json';
 import { Trip } from '../../types/trip';
 
@@ -13,6 +13,7 @@ import styles from './trips.module.scss';
 const Trips: NextPage = () => {
   const [tripData, setTripData] = useState<Trip[]>(TripSetData.tripSet);
   const [checkInDateOrder, setCheckInDateOrder] = useState(false);
+  const [unitStyle, setUnitStyle] = useState('');
 
   const toggleDateOrder = () => {
     const newToggle = !checkInDateOrder;    
@@ -26,6 +27,26 @@ const Trips: NextPage = () => {
     );
   };
 
+  useEffect(() => {
+    if (unitStyle === 'all') {
+      setTripData(TripSetData.tripSet);
+    } else if (unitStyle === 'beach') {
+      const results = TripSetData.tripSet.filter((trip) => trip.unitStyleName.toLowerCase() === unitStyle);
+      setTripData(results);
+    } else if (unitStyle === 'lifestyle') {
+      const results = TripSetData.tripSet.filter((trip) => trip.unitStyleName.toLowerCase() === unitStyle);
+      setTripData(results);
+    } else if (unitStyle === 'metropolitan') {
+      const results = TripSetData.tripSet.filter((trip) => trip.unitStyleName.toLowerCase() === unitStyle);
+      setTripData(results);  
+    } else if (unitStyle === 'mountain') {
+      const results = TripSetData.tripSet.filter((trip) => trip.unitStyleName.toLowerCase() === unitStyle);
+      setTripData(results);
+    } else {
+      setTripData(tripData);
+    }
+  }, [unitStyle]);
+
   return (
     <div>
       <Head>
@@ -36,6 +57,14 @@ const Trips: NextPage = () => {
 
       <main className={styles.trips}>
         <Button label="Sort by farthest trip date" onClick={(): void => toggleDateOrder()} />
+        <label htmlFor="unit-style-select">Sort by unit style:</label>
+        <select id="unit-style-select" name="unit style" onChange={(event) => setUnitStyle(event.target.value)} value={unitStyle}> 
+          <option value="all">All</option>
+          <option value="beach">Beach</option>
+          <option value="lifestyle">Lifestyle</option>
+          <option value="metropolitan">Metropolitan</option>
+          <option value="mountain">Mountain</option>
+        </select>
         <ul className={styles['trips__list']}>
           {tripData.map((trip, index) => {
             return (
