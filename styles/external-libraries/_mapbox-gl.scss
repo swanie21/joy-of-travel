@@ -1,4 +1,4 @@
-@import '../base/fonts';
+@use '../base/fonts';
 
 // Mapbox GL JS custom styles
 .location-marker {
@@ -14,7 +14,7 @@
   padding: 25px 20px !important;
 
   p {
-    font-family: $font-primary;
+    font-family: fonts.$font-primary;
     margin: 15px 0;
   }
 }  

@@ -17,8 +17,7 @@ const Home: NextPage = () => {
       <main className={styles.home}>
         <div className={styles['home__container']}>
           <div className={styles['home__content']}>
-            <h1 className={styles['home__content--title']}>Travel the World</h1>
-            <p className={styles['home__content--subtitle']}>And discover new adventures</p>
+            <h1 className={styles['home__content--title']}>Travel the World <span>And discover new adventures</span></h1>
             <div className={styles['home__buttons']}>
               <LinkButton href="/map" link="Map" />
               <LinkButton href="/destinations/photo-gallery" link="Photos" />

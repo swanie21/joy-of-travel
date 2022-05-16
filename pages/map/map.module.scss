@@ -1,4 +1,4 @@
-@import '../../styles/utils/media-queries'; 
+@use '../../styles/utils/media-queries'; 
 
 .map {
   align-items: center;
@@ -9,7 +9,7 @@
     padding: 2rem;
     text-align: center;
 
-    @include respond_to(tablet-and-larger) {
+    @include media-queries.respond_to(tablet-and-larger) {
       padding: 3rem 3rem 2rem;
     }
 
@@ -24,12 +24,12 @@
     margin: auto;
     width: calc(100% - 4rem);
 
-    @include respond_to(mobile-large-and-larger) {
+    @include media-queries.respond_to(mobile-large-and-larger) {
       height: 75vh;
       width: calc(100% - 8rem);
     }  
 
-    @include respond_to(desktop) {
+    @include media-queries.respond_to(desktop) {
       width: 95%;
     }  
   }
