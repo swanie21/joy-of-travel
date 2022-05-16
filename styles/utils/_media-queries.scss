@@ -1,4 +1,4 @@
-// Media queries
+// Mobile first media queries
 @mixin respond_to($media) {
   @if $media == mobile-small-and-larger {
     @media only screen and (min-width: 480px) {

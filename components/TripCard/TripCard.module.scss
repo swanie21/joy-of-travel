@@ -1,4 +1,4 @@
-@import '../../styles/base/fonts';
+@use '../../styles/base/fonts';
 
 .trip-card {
   background-color: var(--color-white);
@@ -20,7 +20,7 @@
     padding: 24px;
 
     > p {
-      font-family: $font-primary;
+      font-family: fonts.$font-primary;
     }
 
     &--unit-name {
@@ -32,7 +32,7 @@
       line-height: 23px;
 
       > span {
-        font-family: $font-primary-medium;
+        font-family: fonts.$font-primary-medium;
         font-weight: 700;
       }
     }

@@ -1,9 +1,9 @@
-@import 'base/colors';
-@import 'base/fonts';
-@import 'base/reset';
-@import 'base/typography';
-@import 'utils/select-custom-styles';
-@import 'external-libraries/mapbox-gl';
+@use 'base/colors';
+@use 'base/fonts';
+@use 'base/reset';
+@use 'base/typography';
+@use 'utils/select-custom-styles';
+@use 'external-libraries/mapbox-gl';
 
 * {
   box-sizing: border-box;
@@ -11,7 +11,7 @@
 
 html,
 body {
-  font-family: $font-primary;
+  font-family: fonts.$font-primary;
   padding: 0;
   margin: 0;
 }
@@ -27,7 +27,7 @@ main {
 // Link with arrow icon animation
 .link-arrow {
   display: inline-block;
-  font-family: $font-secondary;
+  font-family: fonts.$font-secondary;
 
   > a {
     padding-right: 5px;

@@ -27,7 +27,7 @@ export const LinkButton: React.FunctionComponent<LinkButtonProps> = ({ href, id,
   return (
     <Link href={href} passHref prefetch={prefetch}>
       <AnchorLink
-        className={`${styles.button} ${styles[buttonStyle || 'primary']} ${styles[size || 'large']}`}
+        className={`link-button ${styles.button} ${styles[buttonStyle || 'primary']} ${styles[size || 'large']}`}
         data-testid={dataTestId}
         id={id}
         target={target}

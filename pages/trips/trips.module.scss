@@ -1,10 +1,10 @@
-@import '../../styles/utils/css-grids';
-@import '../../styles/utils/media-queries';
+@use '../../styles/utils/css-grids';
+@use '../../styles/utils/media-queries';
 
 .trips {
   padding: 2rem;
 
-  @include respond_to(tablet-and-larger) {
+  @include media-queries.respond_to(tablet-and-larger) {
     margin: 0 auto;
     max-width: 1200px;
     padding: 3rem;
@@ -15,11 +15,11 @@
     display: flex;
     flex-direction: column;
 
-    @include respond_to(mobile-medium-and-larger) {
+    @include media-queries.respond_to(mobile-medium-and-larger) {
       align-items: flex-end;
     }  
 
-    @include respond_to(tablet-and-larger) {
+    @include media-queries.respond_to(tablet-and-larger) {
       align-items: center;
       flex-direction: row;
       justify-content: flex-end;
@@ -32,7 +32,7 @@
       justify-content: space-between;
       padding-bottom: 15px;
 
-      @include respond_to(mobile-medium-and-larger) {
+      @include media-queries.respond_to(mobile-medium-and-larger) {
         align-items: flex-end;
         flex-direction: row;
       }  
@@ -40,7 +40,7 @@
       > h1 {
         margin-bottom: 15px;
 
-        @include respond_to(mobile-medium-and-larger) {
+        @include media-queries.respond_to(mobile-medium-and-larger) {
           margin-bottom: 0;
         }  
 
@@ -58,7 +58,7 @@
         display: flex;
         margin-bottom: 15px;
 
-        @include respond_to(tablet-and-larger) {
+        @include media-queries.respond_to(tablet-and-larger) {
           margin: 0 1.6rem 0 0;
         }
         
@@ -82,7 +82,7 @@
     width: 100%;
 
     @supports (display: grid) {
-      @include thirds-grid(auto-fill, stretch, 30px, 30px, 300px); // minimum card width is 300px
+      @include css-grids.thirds-grid(auto-fill, stretch, 30px, 30px, 300px); // minimum card width is 300px
     }
   }
 }

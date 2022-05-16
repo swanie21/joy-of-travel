@@ -1,43 +1,44 @@
-@import '../utils/media-queries';
+@use '../base/fonts';
+@use '../utils/media-queries';
 
 h1 {
-  font-family: $font-primary;
+  font-family: fonts.$font-primary;
   font-size: 36px;
   letter-spacing: 1px;
   line-height: 42px;
 
-  @include respond_to(tablet-and-larger) {
+  @include media-queries.respond_to(tablet-and-larger) {
     font-size: 44px;
     line-height: 52px;
   }  
 }
 
 h2 {
-  font-family: $font-primary;
+  font-family: fonts.$font-primary;
   font-size: 28px;
   letter-spacing: 1px;
   line-height: 32px;
 
-  @include respond_to(tablet-and-larger) {
+  @include media-queries.respond_to(tablet-and-larger) {
     font-size: 36px;
     list-height: 42px;
   }  
 }
 
 h3 {
-  font-family: $font-primary;
+  font-family: fonts.$font-primary;
   font-size: 24px;
   letter-spacing: 1px;
   line-height: 27px;
 
-  @include respond_to(tablet-and-larger) {
+  @include media-queries.respond_to(tablet-and-larger) {
     font-size: 28px;
     line-height: 32px;
   }  
 }
 
 p {
-  font-family: $font-secondary;
+  font-family: fonts.$font-secondary;
   font-size: 18px;
   line-height: 27px;
 }
@@ -51,4 +52,12 @@ a {
   &:hover {
     color: var(--color-blue-dark-darker)
   }
+}
+
+button,
+.link-button {
+  font-family: fonts.$font-primary;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 27px;
 }

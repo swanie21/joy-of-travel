@@ -1,4 +1,4 @@
-@import '../../../styles/utils/media-queries'; 
+@use '../../../styles/utils/media-queries'; 
 
 .destinations {
   align-items: center;
@@ -9,7 +9,7 @@
     padding: 2rem;
     text-align: center;
 
-    @include respond_to(tablet-and-larger) {
+    @include media-queries.respond_to(tablet-and-larger) {
       padding: 3rem 3rem 2rem;
     }
 
@@ -25,11 +25,11 @@
     margin-bottom: 100px;
     padding: 0 20px;
 
-    @include respond_to(mobile-large-and-larger) {
+    @include media-queries.respond_to(mobile-large-and-larger) {
       padding: 0 60px;
     }  
 
-    @include respond_to(desktop) {
+    @include media-queries.respond_to(desktop) {
       padding: 0;
     }
   }
