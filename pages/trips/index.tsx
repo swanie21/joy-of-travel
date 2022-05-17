@@ -13,7 +13,7 @@ import styles from './trips.module.scss';
 const Trips: NextPage = () => {
   const [tripData, setTripData] = useState<Trip[]>(TripSetData.tripSet);
   const [checkInDateOrder, setCheckInDateOrder] = useState(false);
-  const [unitStyle, setUnitStyle] = useState<UnitStyleType | undefined>(undefined);
+  const [unitStyle, setUnitStyle] = useState<UnitStyleType | string>('');
 
   const toggleDateOrder = () => {
     const newToggle = !checkInDateOrder;    
@@ -27,7 +27,7 @@ const Trips: NextPage = () => {
     );
   };
 
-  const checkUnitStyle = (unitStyle: string | undefined) => {
+  const checkUnitStyle = (unitStyle: string | string) => {
     if (unitStyle === 'all') {
       setTripData(TripSetData.tripSet);
     } else if (unitStyle === 'beach') {
