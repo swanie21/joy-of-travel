@@ -43,21 +43,12 @@ const Destinations: NextPage = () => {
             {photos.length > 0 && (
               photos.map((item: Destination, index) => (
                 <div className={styles['destinations__photo']} key={index}>
-                  {item.photoOrientation === 'vertical' ? (
-                    <Image
-                      src={item.photo}
-                      alt={item.photoAlt}
-                      width={500}
-                      height={667}
-                    />
-                  ) : (
-                    <Image
-                      src={item.photo}
-                      alt={item.photoAlt}
-                      width={500}
-                      height={375}
-                    />
-                  )}
+                  <Image
+                    src={item.photo}
+                    alt={item.photoAlt}
+                    width={500}
+                    height={item.photoOrientation === 'vertical' ? 667 : 375}
+                  />
                   <div className={styles['destinations__photo--description']}>
                     <p>{item.city}, {item.country}</p>
                   </div>
