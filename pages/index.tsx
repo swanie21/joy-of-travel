@@ -3,7 +3,7 @@ import Head from 'next/head';
 
 import { LinkButton } from '../components/LinkButton';
 
-import styles from '../styles/pages/home.module.scss';
+import styles from '../styles/pages/Home.module.scss';
 
 const Home: NextPage = () => {
   return (
