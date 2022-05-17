@@ -5,3 +5,5 @@ export interface Trip {
   unitName: string;
   unitStyleName: string;
 }
+
+export type UnitStyleType = 'all' | 'beach' | 'lifestyle' | 'metropolitan' | 'mountain'

@@ -7,7 +7,7 @@ import styles from '../styles/pages/home.module.scss';
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <div className={styles['home']}>
       <Head>
         <title>World Adventurer</title>
         <meta charSet="utf-8" />
@@ -16,7 +16,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.home}>
+      <main>
         <div className={styles['home__container']}>
           <div className={styles['home__content']}>
             <h1 className={styles['home__content--title']}>Travel the World <span>And discover new adventures</span></h1>

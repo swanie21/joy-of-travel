@@ -96,14 +96,14 @@ const Map: NextPage = () => {
   }, []);
 
   return (
-    <div className={styles.map} id="map">
+    <div className={styles['map']} id="map">
       <Head>
         <title>Map of World Adventurer</title>
         <meta name="description" content="World map with location markers of all the countries I have traveled to." />
       </Head>
 
       <main>
-        <div className={styles['map__title']}>
+        <div className={styles.map__title}>
           <h1>World Adventurer</h1>
           <p>Traveling is my ultimate joy in life. <Link href="/destinations/photo-gallery"><a>Check out</a></Link> photos from my adventures.</p>
         </div>

@@ -3,7 +3,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import TripSetData from '../api/trips.json';
-import { Trip } from '../../types/trip';
+import { Trip, UnitStyleType } from '../../types/trip';
 
 import { Button } from '../../components/Button';
 import { TripCard } from '../../components/TripCard';
@@ -13,7 +13,7 @@ import styles from './trips.module.scss';
 const Trips: NextPage = () => {
   const [tripData, setTripData] = useState<Trip[]>(TripSetData.tripSet);
   const [checkInDateOrder, setCheckInDateOrder] = useState(false);
-  const [unitStyle, setUnitStyle] = useState('');
+  const [unitStyle, setUnitStyle] = useState<UnitStyleType | undefined>(undefined);
 
   const toggleDateOrder = () => {
     const newToggle = !checkInDateOrder;    
@@ -27,7 +27,7 @@ const Trips: NextPage = () => {
     );
   };
 
-  useEffect(() => {
+  const checkUnitStyle = (unitStyle: string | undefined) => {
     if (unitStyle === 'all') {
       setTripData(TripSetData.tripSet);
     } else if (unitStyle === 'beach') {
@@ -45,17 +45,21 @@ const Trips: NextPage = () => {
     } else {
       setTripData(tripData);
     }
+  };
+
+  useEffect(() => {
+    checkUnitStyle(unitStyle);
   }, [unitStyle]);
 
   return (
-    <div>
+    <div className={styles['trips']}>
       <Head>
         <title>Inspirato: Trips List</title>
         <meta name="description" content="Inspirato list of booked trips" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.trips}>
+      <main>
         <div className={styles['trips__filters--bar']}>
           <h1>Trips <span>({tripData.length} total)</span></h1>
           <div className={styles['trips__filters']}>
